@@ -15,9 +15,6 @@ namespace PolaFigur
             decimal h = 0;
             decimal o = 0;
 
-            Console.ForegroundColor = ConsoleColor.Blue;
-
-
             Console.WriteLine("       Pola figur         ");
             Console.WriteLine("------------------------\n");
             Console.WriteLine("Pole jakiej figury chcesz obliczyć ?");
@@ -52,24 +49,23 @@ namespace PolaFigur
                 case "k":
                     Console.WriteLine("Podaj bok kwadratu:");
                     k = Convert.ToDecimal(Console.ReadLine());
-                    Console.WriteLine($"Pole kwadratu wynosi {Convert.ToDecimal(k * k)}.");
+                    Console.WriteLine($"Pole kwadratu wynosi {(Convert.ToDecimal(k * k)).ToString("#.##")}.");
                     break;
                 case "p":
                     Console.WriteLine("Podaj krótszy bok:");
                     a = Convert.ToDecimal(Console.ReadLine());
                     Console.WriteLine("Podaj dłuższy bok:");
                     b = Convert.ToDecimal(Console.ReadLine());
-                    Console.WriteLine($"Pole prostokąta wynosi {Convert.ToDecimal(a * b)}.");
+                    Console.WriteLine($"Pole prostokąta wynosi {(Convert.ToDecimal(a * b)).ToString("#.##")}.");
                     break;
                 case "t":
                     Console.WriteLine("Podaj podstawę:");
                     c = Convert.ToDecimal(Console.ReadLine());
                     Console.WriteLine("Podaj wysokość:");
                     h = Convert.ToDecimal(Console.ReadLine());
-                    Console.WriteLine($"Pole trójkąta wynosi {Convert.ToDecimal(c * h / 2)}.");
+                    Console.WriteLine($"Pole trójkąta wynosi {(Convert.ToDecimal(c * h / 2)).ToString("#.##")}.");
                     break;
             }
-            Console.WriteLine("\n");
             Console.Write("Wciśnij dowolny przycisk żeby zakończyć...");
             Console.ReadKey();
         }
