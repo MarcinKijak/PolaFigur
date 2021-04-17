@@ -7,10 +7,13 @@ namespace PolaFigur
         
         static void Main(string[] args)
         {
-            
-            decimal r;
-            
-            //Console.WriteLine("Hello World!");
+            decimal r = 0;
+            decimal k = 0;
+            decimal a = 0;
+            decimal b = 0;
+            decimal c = 0;
+            decimal h = 0;
+
             Console.WriteLine("       Pola figur         ");
             Console.WriteLine("------------------------\n");
             Console.WriteLine("Pole jakiej figury chcesz obliczyć ?");
@@ -19,26 +22,45 @@ namespace PolaFigur
             Console.WriteLine($"Okrąg -     wybierz 'o'");
             Console.WriteLine($"Kwadrat -   wybierz 'k'");
             Console.WriteLine($"Prostokąt - wybierz 'p'");
-            Console.WriteLine($"Trapez    - wybierz 't'");
-            //Console.ReadKey();
+            Console.WriteLine($"Trójąt    - wybierz 't'");
             Console.WriteLine($"Twój wybór + Enter ?");
-            //Console.ReadLine();
-            /*
-            if (Console.ReadLine() ==)
+
+
+            if ((Console.ReadLine() != "o") || (Console.ReadLine() != "k") 
+                || (Console.ReadLine() != "p") || (Console.ReadLine() != "t"))
+                //!==('o','k','p','t')
                 {
-                Console.WriteLine("Wybierz prawidłową wartość !");            
+                Console.WriteLine("Wybierz prawidłową wartość !");
                 }
-                else  */
-             switch (Console.ReadLine())
+                else 
+                switch (Console.ReadLine())
                 {
                 case "o":
                     const double pi = 3.14159274;
                     Console.WriteLine("Podaj promień:");
                     r = Convert.ToDecimal(Console.ReadLine());
-                    Console.WriteLine($"Pole okręgu wynosi {Convert.ToDecimal(r*r)*Convert.ToDecimal(pi)} ");
-                break;    
-
-                }
+                    Console.WriteLine($"Pole okręgu wynosi {Convert.ToDecimal(r*r)*Convert.ToDecimal(pi)}.");
+                    break;
+                case "k":
+                    Console.WriteLine("Podaj bok kwadratu:");
+                    k = Convert.ToDecimal(Console.ReadLine());
+                    Console.WriteLine($"Pole kwadratu wynosi {Convert.ToDecimal(k * k)}.");
+                    break;
+                case "p":
+                    Console.WriteLine("Podaj krótszy bok:");
+                    a = Convert.ToDecimal(Console.ReadLine());
+                    Console.WriteLine("Podaj dłuższy bok:");
+                    b = Convert.ToDecimal(Console.ReadLine());
+                    Console.WriteLine($"Pole prostokąta wynosi {Convert.ToDecimal(a * b)}.");
+                    break;
+                case "t":
+                    Console.WriteLine("Podaj podstawę:");
+                    c = Convert.ToDecimal(Console.ReadLine());
+                    Console.WriteLine("Podaj wysokość:");
+                    h = Convert.ToDecimal(Console.ReadLine());
+                    Console.WriteLine($"Pole trójkąta wynosi {Convert.ToDecimal(c * h / 2)}.");
+                    break;
+            }
 
                 
             Console.ReadKey();
