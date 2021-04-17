@@ -23,16 +23,25 @@ namespace PolaFigur
             Console.WriteLine($"Kwadrat -   wybierz 'k'");
             Console.WriteLine($"Prostokąt - wybierz 'p'");
             Console.WriteLine($"Trójąt    - wybierz 't'");
+            Console.WriteLine("\n");
             Console.WriteLine($"Twój wybór + Enter ?");
 
 
-            if ((Console.ReadLine() != "o") || (Console.ReadLine() != "k") 
+
+            // if ((Console.ReadLine() != "o") || (Console.ReadLine() != "k") 
+            //     || (Console.ReadLine() != "p") || (Console.ReadLine() != "t"))
+            //     {
+            //     Console.WriteLine("Wybierz prawidłową wartość !");
+            //     }
+            //     else 
+            while ((Console.ReadLine() != "o") || (Console.ReadLine() != "k")
                 || (Console.ReadLine() != "p") || (Console.ReadLine() != "t"))
-                //!==('o','k','p','t')
-                {
-                Console.WriteLine("Wybierz prawidłową wartość !");
-                }
-                else 
+            {
+                Console.WriteLine($"Wprowadź prawidłową wartość.");
+            }
+
+
+
                 switch (Console.ReadLine())
                 {
                 case "o":
@@ -61,8 +70,8 @@ namespace PolaFigur
                     Console.WriteLine($"Pole trójkąta wynosi {Convert.ToDecimal(c * h / 2)}.");
                     break;
             }
-
-                
+            Console.WriteLine("\n");
+            Console.Write("Wciśnij dowolny przycisk żeby zakończyć...");
             Console.ReadKey();
         }
     }
