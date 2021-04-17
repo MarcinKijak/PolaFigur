@@ -4,7 +4,7 @@ namespace PolaFigur
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
             decimal r = 0;
@@ -13,6 +13,10 @@ namespace PolaFigur
             decimal b = 0;
             decimal c = 0;
             decimal h = 0;
+            decimal o = 0;
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+
 
             Console.WriteLine("       Pola figur         ");
             Console.WriteLine("------------------------\n");
@@ -26,29 +30,24 @@ namespace PolaFigur
             Console.WriteLine("\n");
             Console.WriteLine($"Twój wybór + Enter ?");
 
+            string check = Console.ReadLine();
+            //sprawdza czy wybór figury jest ok
 
-
-            // if ((Console.ReadLine() != "o") || (Console.ReadLine() != "k") 
-            //     || (Console.ReadLine() != "p") || (Console.ReadLine() != "t"))
-            //     {
-            //     Console.WriteLine("Wybierz prawidłową wartość !");
-            //     }
-            //     else 
-            while ((Console.ReadLine() != "o") || (Console.ReadLine() != "k")
-                || (Console.ReadLine() != "p") || (Console.ReadLine() != "t"))
-            {
+            while ((check != "o") && (check != "k") && (check != "p") && (check != "t"))    
+                {
                 Console.WriteLine($"Wprowadź prawidłową wartość.");
-            }
-
-
-
-                switch (Console.ReadLine())
+                check = Console.ReadLine();
+                }
+         
+            // obliczenia na podstawie wyboru
+                switch (check)
                 {
                 case "o":
                     const double pi = 3.14159274;
                     Console.WriteLine("Podaj promień:");
                     r = Convert.ToDecimal(Console.ReadLine());
-                    Console.WriteLine($"Pole okręgu wynosi {Convert.ToDecimal(r*r)*Convert.ToDecimal(pi)}.");
+                    o = (Convert.ToDecimal(r * r) * Convert.ToDecimal(pi));
+                    Console.WriteLine($"Pole okręgu wynosi {o.ToString("#.##")}.");
                     break;
                 case "k":
                     Console.WriteLine("Podaj bok kwadratu:");
