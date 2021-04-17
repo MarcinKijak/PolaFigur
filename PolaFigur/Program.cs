@@ -39,26 +39,29 @@ namespace PolaFigur
             // obliczenia na podstawie wyboru
                 switch (check)
                 {
-                case "o":
+                case "o":   //okrąg
                     const double pi = 3.14159274;
                     Console.WriteLine("Podaj promień:");
                     r = Convert.ToDecimal(Console.ReadLine());
                     o = (Convert.ToDecimal(r * r) * Convert.ToDecimal(pi));
                     Console.WriteLine($"Pole okręgu wynosi {o.ToString("#.##")}.");
                     break;
-                case "k":
+                
+                case "k":   //kwadrat
                     Console.WriteLine("Podaj bok kwadratu:");
                     k = Convert.ToDecimal(Console.ReadLine());
                     Console.WriteLine($"Pole kwadratu wynosi {(Convert.ToDecimal(k * k)).ToString("#.##")}.");
                     break;
-                case "p":
+                
+                case "p":   //prostokąt
                     Console.WriteLine("Podaj krótszy bok:");
                     a = Convert.ToDecimal(Console.ReadLine());
                     Console.WriteLine("Podaj dłuższy bok:");
                     b = Convert.ToDecimal(Console.ReadLine());
                     Console.WriteLine($"Pole prostokąta wynosi {(Convert.ToDecimal(a * b)).ToString("#.##")}.");
                     break;
-                case "t":
+                
+                case "t":   //trójkąt
                     Console.WriteLine("Podaj podstawę:");
                     c = Convert.ToDecimal(Console.ReadLine());
                     Console.WriteLine("Podaj wysokość:");
