@@ -4,8 +4,10 @@ namespace PolaFigur
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
+            
             decimal r;
             
             //Console.WriteLine("Hello World!");
@@ -30,12 +32,11 @@ namespace PolaFigur
              switch (Console.ReadLine())
                 {
                 case "o":
-                    //decimal r = 0;
+                    const double pi = 3.14159274;
                     Console.WriteLine("Podaj promień:");
                     r = Convert.ToDecimal(Console.ReadLine());
-                    Console.WriteLine($"Pole okręgu wynosi ");
-                    break;    
-
+                    Console.WriteLine($"Pole okręgu wynosi {Convert.ToDecimal(r*r)*Convert.ToDecimal(pi)} ");
+                break;    
 
                 }
 
