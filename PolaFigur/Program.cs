@@ -40,7 +40,7 @@ namespace PolaFigur
                 switch (check)
                 {
                 case "o":   //okrąg
-                    const double pi = 3.14159274;
+                    const double pi = Math.PI;
                     Console.WriteLine("Podaj promień:");
                     r = Convert.ToDecimal(Console.ReadLine());
                     o = (Convert.ToDecimal(r * r) * Convert.ToDecimal(pi));
